@@ -3,6 +3,9 @@ let properties = require("../package.json");
 let weather = require("../service/weather");
 
 let controllers = {
+    health: (req, res) => {
+        res.json({"status":"OK"})
+    },
     about: (req, res) => {
         let aboutInfo ={
             name: properties.name,
